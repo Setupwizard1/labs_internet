@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Калькулятор</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- Задание 19: цель ЛР с подсветкой слов тегом <mark> -->
+    <p class="goal">
+      <b>Цель ЛР:</b> <mark>знакомство</mark> с инструментами построения
+      интерфейсов: <mark>HTML</mark> и <mark>CSS</mark>.
+    </p>
+
+    <!-- Задание 18: сворачивающиеся подробности -->
+    <details class="author">
+      <summary>Автор</summary>
+      <p>ФИО: Сергеева М.А.</p>
+      <p>Группа: ИБМ3-54Б</p>
+    </details>
+
+    <div class="calc">
+
+      <!-- экран калькулятора -->
+      <div id="result" class="result">
+        0
+      </div>
+
+      <!-- Задание 17: поле с выпадающим списком -->
+      <select class="my-select" id="op_select">
+        <option>Сложение</option>
+        <option>Вычитание</option>
+        <option>Умножение</option>
+        <option>Деление</option>
+      </select>
+
+      <!-- кнопки калькулятора -->
+      <div>
+        <div class="row">
+          <button id="btn_op_clear" class="my-btn secondary">C</button>
+          <button id="btn_op_sign" class="my-btn secondary">+/-</button>
+          <button id="btn_op_percent" class="my-btn secondary">%</button>
+          <button id="btn_op_div" class="my-btn primary">/</button>
+        </div>
+
+        <div class="row">
+          <button id="btn_digit_7" class="my-btn">7</button>
+          <button id="btn_digit_8" class="my-btn">8</button>
+          <button id="btn_digit_9" class="my-btn">9</button>
+          <button id="btn_op_mult" class="my-btn primary">x</button>
+        </div>
+
+        <div class="row">
+          <button id="btn_digit_4" class="my-btn">4</button>
+          <button id="btn_digit_5" class="my-btn">5</button>
+          <button id="btn_digit_6" class="my-btn">6</button>
+          <button id="btn_op_minus" class="my-btn primary">-</button>
+        </div>
+
+        <div class="row">
+          <button id="btn_digit_1" class="my-btn">1</button>
+          <button id="btn_digit_2" class="my-btn">2</button>
+          <button id="btn_digit_3" class="my-btn">3</button>
+          <button id="btn_op_plus" class="my-btn primary">+</button>
+        </div>
+
+        <div class="row">
+          <button id="btn_digit_0" class="my-btn">0</button>
+          <button id="btn_digit_dot" class="my-btn">.</button>
+          <button id="btn_op_equal" class="my-btn primary execute">=</button>
+        </div>
+      </div>
+
+      <!-- Задания 12 и 16: смена темы и ссылка на GitHub -->
+      <div class="row tools">
+        <button class="my-btn tool"
+                onclick="document.body.classList.toggle('light')">Тема</button>
+        <a class="my-btn tool link" href="https://github.com/Setupwizard1"
+           target="_blank">GitHub</a>
+      </div>
+    </div>
+
+    <!-- Задание 9: надпись внизу -->
+    <p class="footer">by setupwizard</p>
+  </div>
+</body>
+
+</html>

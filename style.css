@@ -1,0 +1,196 @@
+/* ===== Цвета (Задания 1, 2, 4, 8, 12, 14, 20) ===== */
+/* Стилистика в духе Spotify: тёмный фон и зелёный акцент (Задание 20) */
+:root {
+  --bg: #121212;            /* 2: тёмный фон (ночная тема) */
+  --panel: #181818;
+  --text: #ffffff;
+  --btn: #282828;
+  --btn-text: #ffd54f;      /* 14: цвет шрифта кнопок */
+  --primary: #1db954;       /* 1: новая палитра вместо оранжево-серой */
+  --primary-text: #121212;
+  --secondary: #535353;
+  --hover: #7c4dff;         /* 8: цвет при наведении */
+  --result-bg: #0b0b0b;
+  --result-text: #1ed760;   /* 4: цвет вывода результата */
+}
+
+/* 12: светлая тема, включается кнопкой "Тема" */
+body.light {
+  --bg: #f2f2f2;
+  --panel: #ffffff;
+  --text: #121212;
+  --btn: #d9d9d9;
+  --btn-text: #6a4c00;
+  --secondary: #bdbdbd;
+  --result-bg: #e8f5e9;
+  --result-text: #0b6b2e;
+}
+
+/* ===== Страница ===== */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;                 /* 10: выравнивание по центру */
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg);
+  background-image: url("bg.jpg"); /* 15: фоновое изображение (файл bg.jpg рядом) */
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay; /* смешивание картинки с цветом темы */
+  color: var(--text);
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.calc {
+  padding: 20px;
+  background: var(--panel);
+  border-radius: 16px;
+}
+
+.row {
+  display: flex;
+}
+
+/* ===== Кнопки ===== */
+.my-btn {
+  margin-right: 5px;
+  margin-top: 5px;
+  width: 70px;
+  height: 70px;
+  border-radius: 0;              /* 3: квадратные кнопки */
+  border: none;
+  background: var(--btn);
+  color: var(--btn-text);
+  font-size: 1.5rem;
+  font-family: "Courier New", Courier, monospace; /* 6: шрифт цифр */
+  font-weight: 700;              /* 7: более толстый шрифт */
+  cursor: pointer;
+  user-select: none;
+}
+
+.my-btn:hover {
+  background: var(--hover);      /* 8 */
+  color: #ffffff;
+}
+
+.my-btn:active {
+  filter: brightness(130%);
+}
+
+.my-btn.primary {
+  background: var(--primary);
+  color: var(--primary-text);
+}
+
+.my-btn.primary:hover {
+  background: var(--hover);
+  color: #ffffff;
+}
+
+.my-btn.secondary {
+  background: var(--secondary);
+}
+
+.my-btn.secondary:hover {
+  background: var(--hover);
+}
+
+.my-btn.execute {
+  width: 145px;                  /* кнопка "=" шире остальных */
+  border-radius: 0;
+}
+
+/* ===== Окно вывода ===== */
+.result {
+  box-sizing: border-box;
+  width: 300px;                  /* 11: увеличенное окно */
+  height: 80px;
+  margin-bottom: 10px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: var(--result-bg);
+  color: var(--result-text);     /* 4 */
+  border-radius: 15px;           /* 5: скруглённые края */
+  font-size: 2rem;
+  font-weight: 300;              /* 13: более тонкий шрифт */
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  text-align: right;
+}
+
+/* ===== Выпадающий список (17) ===== */
+.my-select {
+  box-sizing: border-box;
+  width: 300px;
+  height: 40px;
+  margin-bottom: 5px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 8px;
+  background: var(--btn);
+  color: var(--btn-text);
+  font-size: 1rem;
+}
+
+/* ===== Нижняя панель: тема и GitHub (12, 16) ===== */
+.tools {
+  margin-top: 5px;
+}
+
+.my-btn.tool {
+  width: 147px;
+  height: 45px;
+  margin-right: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: var(--btn);
+}
+
+.my-btn.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* ===== Текстовые блоки (9, 18, 19) ===== */
+.goal,
+.author {
+  width: 340px;
+  margin: 0 0 10px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  background: var(--panel);
+  border-radius: 12px;
+}
+
+.goal mark {                      /* 19: подсветка слов */
+  background: var(--primary);
+  color: var(--primary-text);
+  padding: 0 4px;
+  border-radius: 3px;
+}
+
+.author summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.author p {
+  margin: 6px 0 0;
+}
+
+.footer {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
